@@ -14,9 +14,9 @@ RUN apk update --no-cache
 ### What the Dockerfile Does
 
 1. **Base Image**: Uses `node:22-alpine` as the base image
-   - This is the official Node.js version 22 image built on Alpine Linux 3.23
+   - This is the official Node.js version 22 image built on Alpine Linux
    - Alpine Linux is a security-oriented, lightweight Linux distribution
-   - The image includes Node.js v22.21.1 and npm
+   - The image includes Node.js v22.x and npm
 
 2. **Package Manager Update**: Attempts to update the Alpine package index with `apk update --no-cache`
    - `apk` is the Alpine Package Keeper, Alpine Linux's package manager
