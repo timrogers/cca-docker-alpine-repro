@@ -21,7 +21,7 @@ RUN apk update --no-cache
 2. **Package Manager Update**: Attempts to update the Alpine package index with `apk update --no-cache`
    - `apk` is the Alpine Package Keeper, Alpine Linux's package manager
    - `update` refreshes the package index from remote repositories
-   - `--no-cache` flag prevents caching of the package index locally
+   - `--no-cache` flag means apk will not use local cache when fetching the package index
 
 ### Build Status
 
@@ -39,9 +39,8 @@ ERROR: failed to build: failed to solve: process "/bin/sh -c apk update --no-cac
 
 The build failure is caused by TLS connectivity issues when the Alpine package manager attempts to connect to the Alpine package repositories. This appears to be a network or environment-specific issue where:
 
-- The base `node:22-alpine` image downloads and runs successfully
-- Network connectivity to Docker Hub works properly
-- However, TLS connections from within the Alpine container to `dl-cdn.alpinelinux.org` fail
+- The base `node:22-alpine` image is available (either cached or downloaded successfully)
+- However, TLS connections from within the Alpine container to `dl-cdn.alpinelinux.org` fail with unspecified errors
 
 ### Workarounds
 
