@@ -6,10 +6,12 @@ This repository contains a minimal Dockerfile for creating a Node.js container b
 
 The Dockerfile uses the official `node:22-alpine` base image, which provides:
 
-- **Base OS**: Alpine Linux v3.23 - A lightweight Linux distribution ideal for containers
-- **Node.js Version**: v22.21.1 - The latest Long Term Support (LTS) version of Node.js
-- **Package Manager**: npm v10.9.4 - Node Package Manager for managing JavaScript dependencies
+- **Base OS**: Alpine Linux - A lightweight Linux distribution ideal for containers
+- **Node.js Version**: v22 (current release) - Modern JavaScript runtime environment
+- **Package Manager**: npm - Node Package Manager for managing JavaScript dependencies
 - **Image Size**: Optimized for minimal footprint using Alpine Linux
+
+> **Note**: Version numbers may vary as the base image is updated. Current versions at time of writing: Alpine Linux v3.23, Node.js v22.21.1, npm v10.9.4
 
 ### Features
 
